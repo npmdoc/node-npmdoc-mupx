@@ -1,0 +1,1215 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+    >mupx (v1.5.3)</a>
+</h1>
+<h4>Production Quality Meteor Deployments</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mupx">module mupx</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mupx.actions">
+            function <span class="apidocSignatureSpan">mupx.</span>actions
+            <span class="apidocSignatureSpan">(config, cwd, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">mupx.</span>actions.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">mupx.</span>config</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">mupx.</span>helpers</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">mupx.</span>linux</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mupx.actions">module mupx.actions</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mupx.actions.actions">
+            function <span class="apidocSignatureSpan">mupx.</span>actions
+            <span class="apidocSignatureSpan">(config, cwd, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mupx.actions.init">
+            function <span class="apidocSignatureSpan">mupx.actions.</span>init
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mupx.actions.prototype">module mupx.actions.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mupx.actions.prototype._createSessionsMap">
+            function <span class="apidocSignatureSpan">mupx.actions.prototype.</span>_createSessionsMap
+            <span class="apidocSignatureSpan">(config)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mupx.actions.prototype._executePararell">
+            function <span class="apidocSignatureSpan">mupx.actions.prototype.</span>_executePararell
+            <span class="apidocSignatureSpan">(actionName, args)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mupx.actions.prototype._showKadiraLink">
+            function <span class="apidocSignatureSpan">mupx.actions.prototype.</span>_showKadiraLink
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mupx.actions.prototype.deploy">
+            function <span class="apidocSignatureSpan">mupx.actions.prototype.</span>deploy
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mupx.actions.prototype.logs">
+            function <span class="apidocSignatureSpan">mupx.actions.prototype.</span>logs
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mupx.actions.prototype.reconfig">
+            function <span class="apidocSignatureSpan">mupx.actions.prototype.</span>reconfig
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mupx.actions.prototype.restart">
+            function <span class="apidocSignatureSpan">mupx.actions.prototype.</span>restart
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mupx.actions.prototype.setup">
+            function <span class="apidocSignatureSpan">mupx.actions.prototype.</span>setup
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mupx.actions.prototype.start">
+            function <span class="apidocSignatureSpan">mupx.actions.prototype.</span>start
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mupx.actions.prototype.stop">
+            function <span class="apidocSignatureSpan">mupx.actions.prototype.</span>stop
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mupx.config">module mupx.config</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mupx.config.read">
+            function <span class="apidocSignatureSpan">mupx.config.</span>read
+            <span class="apidocSignatureSpan">(configFileName)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mupx.helpers">module mupx.helpers</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mupx.helpers.printHelp">
+            function <span class="apidocSignatureSpan">mupx.helpers.</span>printHelp
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mupx.linux">module mupx.linux</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mupx.linux.deploy">
+            function <span class="apidocSignatureSpan">mupx.linux.</span>deploy
+            <span class="apidocSignatureSpan">(bundlePath, env, config)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mupx.linux.reconfig">
+            function <span class="apidocSignatureSpan">mupx.linux.</span>reconfig
+            <span class="apidocSignatureSpan">(env, config)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mupx.linux.restart">
+            function <span class="apidocSignatureSpan">mupx.linux.</span>restart
+            <span class="apidocSignatureSpan">(config)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mupx.linux.setup">
+            function <span class="apidocSignatureSpan">mupx.linux.</span>setup
+            <span class="apidocSignatureSpan">(config)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mupx.linux.start">
+            function <span class="apidocSignatureSpan">mupx.linux.</span>start
+            <span class="apidocSignatureSpan">(config)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mupx.linux.stop">
+            function <span class="apidocSignatureSpan">mupx.linux.</span>stop
+            <span class="apidocSignatureSpan">(config)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mupx" id="apidoc.module.mupx">module mupx</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mupx.actions" id="apidoc.element.mupx.actions">
+        function <span class="apidocSignatureSpan">mupx.</span>actions
+        <span class="apidocSignatureSpan">(config, cwd, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Actions(config, cwd, options) {
+  this.cwd = cwd;
+  this.config = config;
+  this.sessionsMap = this._createSessionsMap(config);
+  this.settingsFileName = options.settingsFileName;
+
+  //get settingsFileName into env
+  var setttingsJsonPath = path.resolve(this.cwd, this.settingsFileName);
+  if(fs.existsSync(setttingsJsonPath)) {
+    this.config.env[&#x27;METEOR_SETTINGS&#x27;] = JSON.stringify(require(setttingsJsonPath));
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mupx.actions" id="apidoc.module.mupx.actions">module mupx.actions</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mupx.actions.actions" id="apidoc.element.mupx.actions.actions">
+        function <span class="apidocSignatureSpan">mupx.</span>actions
+        <span class="apidocSignatureSpan">(config, cwd, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Actions(config, cwd, options) {
+  this.cwd = cwd;
+  this.config = config;
+  this.sessionsMap = this._createSessionsMap(config);
+  this.settingsFileName = options.settingsFileName;
+
+  //get settingsFileName into env
+  var setttingsJsonPath = path.resolve(this.cwd, this.settingsFileName);
+  if(fs.existsSync(setttingsJsonPath)) {
+    this.config.env[&#x27;METEOR_SETTINGS&#x27;] = JSON.stringify(require(setttingsJsonPath));
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mupx.actions.init" id="apidoc.element.mupx.actions.init">
+        function <span class="apidocSignatureSpan">mupx.actions.</span>init
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">init = function () {
+  var destMupJson = path.resolve(&#x27;mup.json&#x27;);
+  var destSettingsJson = path.resolve(&#x27;settings.json&#x27;);
+
+  if(fs.existsSync(destMupJson) || fs.existsSync(destSettingsJson)) {
+    console.error(&#x27;A Project Already Exists&#x27;.bold.red);
+    process.exit(1);
+  }
+
+  var exampleMupJson = path.resolve(__dirname, &#x27;../example/mup.json&#x27;);
+  var exampleSettingsJson = path.resolve(__dirname, &#x27;../example/settings.json&#x27;);
+
+  copyFile(exampleMupJson, destMupJson);
+  copyFile(exampleSettingsJson, destSettingsJson);
+
+  console.log(&#x27;Empty Project Initialized!&#x27;.bold.green);
+
+  function copyFile(src, dest) {
+    var content = fs.readFileSync(src, &#x27;utf8&#x27;);
+    fs.writeFileSync(dest, content);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mupx.actions.prototype" id="apidoc.module.mupx.actions.prototype">module mupx.actions.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mupx.actions.prototype._createSessionsMap" id="apidoc.element.mupx.actions.prototype._createSessionsMap">
+        function <span class="apidocSignatureSpan">mupx.actions.prototype.</span>_createSessionsMap
+        <span class="apidocSignatureSpan">(config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_createSessionsMap = function (config) {
+  var sessionsMap = {};
+
+  config.servers.forEach(function(server) {
+    var host = server.host;
+    var auth = {username: server.username};
+
+    if(server.pem) {
+      auth.pem = fs.readFileSync(path.resolve(server.pem), &#x27;utf8&#x27;);
+    } else {
+      auth.password = server.password;
+    }
+
+    var nodemiralOptions = {
+      ssh: server.sshOptions,
+      keepAlive: true
+    };
+
+    if(!sessionsMap[server.os]) {
+      sessionsMap[server.os] = {
+        sessions: [],
+        taskListsBuilder:require(&#x27;./taskLists&#x27;)(server.os)
+      };
+    }
+
+    var session = nodemiral.session(host, auth, nodemiralOptions);
+    session._serverConfig = server;
+    sessionsMap[server.os].sessions.push(session);
+  });
+
+  return sessionsMap;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+require(&#x27;colors&#x27;);
+
+module.exports = Actions;
+
+function Actions(config, cwd, options) {
+this.cwd = cwd;
+this.config = config;
+this.sessionsMap = this.<span class="apidocCodeKeywordSpan">_createSessionsMap</span>(config);
+this.settingsFileName = options.settingsFileName;
+
+//get settingsFileName into env
+var setttingsJsonPath = path.resolve(this.cwd, this.settingsFileName);
+if(fs.existsSync(setttingsJsonPath)) {
+  this.config.env[&#x27;METEOR_SETTINGS&#x27;] = JSON.stringify(require(setttingsJsonPath));
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mupx.actions.prototype._executePararell" id="apidoc.element.mupx.actions.prototype._executePararell">
+        function <span class="apidocSignatureSpan">mupx.actions.prototype.</span>_executePararell
+        <span class="apidocSignatureSpan">(actionName, args)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_executePararell = function (actionName, args) {
+  var self = this;
+  var sessionInfoList = _.values(self.sessionsMap);
+  async.map(
+    sessionInfoList,
+    function(sessionsInfo, callback) {
+      var taskList = sessionsInfo.taskListsBuilder[actionName]
+        .apply(sessionsInfo.taskListsBuilder, args);
+      taskList.run(sessionsInfo.sessions, function(summaryMap) {
+        callback(null, summaryMap);
+      });
+    },
+    whenAfterCompleted
+  );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  },
+  whenAfterCompleted
+);
+};
+
+Actions.prototype.setup = function() {
+this._showKadiraLink();
+this.<span class="apidocCodeKeywordSpan">_executePararell</span>(&#x22;setup&#x22;, [this.config]);
+};
+
+Actions.prototype.deploy = function() {
+var self = this;
+self._showKadiraLink();
+
+var buildLocation = path.resolve(&#x27;/tmp&#x27;, uuid.v4());
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mupx.actions.prototype._showKadiraLink" id="apidoc.element.mupx.actions.prototype._showKadiraLink">
+        function <span class="apidocSignatureSpan">mupx.actions.prototype.</span>_showKadiraLink
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_showKadiraLink = function () {
+  var versionsFile = path.join(this.config.app, &#x27;.meteor/versions&#x27;);
+  if(fs.existsSync(versionsFile)) {
+    var packages = fs.readFileSync(versionsFile, &#x27;utf-8&#x27;);
+    var hasKadira = kadiraRegex.test(packages);
+    if(!hasKadira) {
+      console.log(
+        &#x22;“ Checkout &#x22; + &#x22;Kadira&#x22;.bold + &#x22;!&#x22;+
+        &#x22;\n  It&#x27;s the best way to monitor performance of your app.&#x22;+
+        &#x22;\n  Visit: &#x22; + &#x22;https://kadira.io/mup&#x22;.underline + &#x22; ”\n&#x22;
+      );
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    });
+  },
+  whenAfterCompleted
+);
+};
+
+Actions.prototype.setup = function() {
+this.<span class="apidocCodeKeywordSpan">_showKadiraLink</span>();
+this._executePararell(&#x22;setup&#x22;, [this.config]);
+};
+
+Actions.prototype.deploy = function() {
+var self = this;
+self._showKadiraLink();
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mupx.actions.prototype.deploy" id="apidoc.element.mupx.actions.prototype.deploy">
+        function <span class="apidocSignatureSpan">mupx.actions.prototype.</span>deploy
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">deploy = function () {
+  var self = this;
+  self._showKadiraLink();
+
+  var buildLocation = path.resolve(&#x27;/tmp&#x27;, uuid.v4());
+  var bundlePath = path.resolve(buildLocation, &#x27;bundle.tar.gz&#x27;);
+
+  // spawn inherits env vars from process.env
+  // so we can simply set them like this
+  process.env.BUILD_LOCATION = buildLocation;
+
+  var deployCheckWaitTime = this.config.deployCheckWaitTime;
+  var appName = this.config.appName;
+  var appPath = this.config.app;
+  var buildOptions = this.config.buildOptions;
+
+  console.log(&#x27;Meteor app path    : &#x27; + this.config.app);
+  console.log(&#x27;Using buildOptions : &#x27; + JSON.stringify(buildOptions));
+  buildApp(appPath, buildLocation, buildOptions, function(err) {
+    if(err) {
+      process.exit(1);
+    } else {
+      var sessionsData = [];
+      _.forEach(self.sessionsMap, function (sessionsInfo) {
+        var taskListsBuilder = sessionsInfo.taskListsBuilder;
+        _.forEach(sessionsInfo.sessions, function (session) {
+          sessionsData.push({
+            taskListsBuilder: taskListsBuilder,
+            session: session
+          });
+        });
+      });
+
+      async.mapSeries(
+        sessionsData,
+        function (sessionData, callback) {
+          var session = sessionData.session;
+          var taskListsBuilder = sessionData.taskListsBuilder
+          var env = _.extend({}, self.config.env, session._serverConfig.env);
+          var taskList = taskListsBuilder.deploy(
+            bundlePath, env, self.config);
+          taskList.run(session, function (summaryMap) {
+            callback(null, summaryMap);
+          });
+        },
+        whenAfterDeployed(buildLocation)
+      )
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+async.mapSeries(
+  sessionsData,
+  function (sessionData, callback) {
+    var session = sessionData.session;
+    var taskListsBuilder = sessionData.taskListsBuilder
+    var env = _.extend({}, self.config.env, session._serverConfig.env);
+    var taskList = taskListsBuilder.<span class="apidocCodeKeywordSpan">deploy</span>(
+      bundlePath, env, self.config);
+    taskList.run(session, function (summaryMap) {
+      callback(null, summaryMap);
+    });
+  },
+  whenAfterDeployed(buildLocation)
+)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mupx.actions.prototype.logs" id="apidoc.element.mupx.actions.prototype.logs">
+        function <span class="apidocSignatureSpan">mupx.actions.prototype.</span>logs
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">logs = function () {
+  var self = this;
+  var tailOptions = process.argv.slice(3).join(&#x22; &#x22;);
+
+  var sessions = [];
+
+  for(var os in self.sessionsMap) {
+    var sessionsInfo = self.sessionsMap[os];
+    sessionsInfo.sessions.forEach(function(session) {
+      sessions.push(session);
+    });
+  }
+
+  async.map(
+    sessions,
+    function(session, callback) {
+      var hostPrefix = &#x27;[&#x27; + session._host + &#x27;] &#x27;;
+      var options = {
+        onStdout: function(data) {
+          process.stdout.write(hostPrefix + data.toString());
+        },
+        onStderr: function(data) {
+          process.stderr.write(hostPrefix + data.toString());
+        }
+      };
+
+      var command = &#x27;sudo docker logs &#x27; + tailOptions + &#x27; &#x27; + self.config.appName;
+      session.execute(command, options, callback);
+    },
+    whenAfterCompleted
+  );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mupx.actions.prototype.reconfig" id="apidoc.element.mupx.actions.prototype.reconfig">
+        function <span class="apidocSignatureSpan">mupx.actions.prototype.</span>reconfig
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">reconfig = function () {
+  var self = this;
+  var sessionInfoList = [];
+  for(var os in self.sessionsMap) {
+    var sessionsInfo = self.sessionsMap[os];
+    sessionsInfo.sessions.forEach(function(session) {
+      var env = _.extend({}, self.config.env, session._serverConfig.env);
+      var taskList = sessionsInfo.taskListsBuilder.reconfig(
+        env, self.config);
+      sessionInfoList.push({
+        taskList: taskList,
+        session: session
+      });
+    });
+  }
+
+  async.mapSeries(
+    sessionInfoList,
+    function(sessionsInfo, callback) {
+      sessionsInfo.taskList.run(sessionsInfo.session, function(summaryMap) {
+        callback(null, summaryMap);
+      });
+    },
+    whenAfterCompleted
+  );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Actions.prototype.reconfig = function() {
+var self = this;
+var sessionInfoList = [];
+for(var os in self.sessionsMap) {
+  var sessionsInfo = self.sessionsMap[os];
+  sessionsInfo.sessions.forEach(function(session) {
+    var env = _.extend({}, self.config.env, session._serverConfig.env);
+    var taskList = sessionsInfo.taskListsBuilder.<span class="apidocCodeKeywordSpan">reconfig</span>(
+      env, self.config);
+    sessionInfoList.push({
+      taskList: taskList,
+      session: session
+    });
+  });
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mupx.actions.prototype.restart" id="apidoc.element.mupx.actions.prototype.restart">
+        function <span class="apidocSignatureSpan">mupx.actions.prototype.</span>restart
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">restart = function () {
+  this._executePararell(&#x22;restart&#x22;, [this.config]);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mupx.actions.prototype.setup" id="apidoc.element.mupx.actions.prototype.setup">
+        function <span class="apidocSignatureSpan">mupx.actions.prototype.</span>setup
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setup = function () {
+  this._showKadiraLink();
+  this._executePararell(&#x22;setup&#x22;, [this.config]);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mupx.actions.prototype.start" id="apidoc.element.mupx.actions.prototype.start">
+        function <span class="apidocSignatureSpan">mupx.actions.prototype.</span>start
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">start = function () {
+  this._executePararell(&#x22;start&#x22;, [this.config]);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mupx.actions.prototype.stop" id="apidoc.element.mupx.actions.prototype.stop">
+        function <span class="apidocSignatureSpan">mupx.actions.prototype.</span>stop
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stop = function () {
+  this._executePararell(&#x22;stop&#x22;, [this.config]);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mupx.config" id="apidoc.module.mupx.config">module mupx.config</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mupx.config.read" id="apidoc.element.mupx.config.read">
+        function <span class="apidocSignatureSpan">mupx.config.</span>read
+        <span class="apidocSignatureSpan">(configFileName)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">read = function (configFileName) {
+  var mupJsonPath = path.resolve(configFileName);
+  // path of the mup.json file is the basedir and everything
+  // will be based on that path
+  var basedir = path.dirname(mupJsonPath);
+
+  if(fs.existsSync(mupJsonPath)) {
+    var mupJson = cjson.load(mupJsonPath);
+
+    //initialize options
+    mupJson.env = mupJson.env || {};
+    mupJson.env[&#x27;PORT&#x27;] = mupJson.env[&#x27;PORT&#x27;] || 80;
+
+    if(typeof mupJson.setupNode === &#x22;undefined&#x22;) {
+      mupJson.setupNode = true;
+    }
+    if(typeof mupJson.setupPhantom === &#x22;undefined&#x22;) {
+      mupJson.setupPhantom = true;
+    }
+    if(typeof mupJson.appName === &#x22;undefined&#x22;) {
+      mupJson.appName = &#x22;meteor&#x22;;
+    }
+
+    if(typeof mupJson.enableUploadProgressBar === &#x22;undefined&#x22;) {
+      mupJson.enableUploadProgressBar = true;
+    }
+
+    //validating servers
+    if(!mupJson.servers || mupJson.servers.length == 0) {
+      mupErrorLog(&#x27;Server information does not exist&#x27;);
+    } else {
+      mupJson.servers.forEach(function(server) {
+        var sshAgentExists = false;
+        var sshAgent = process.env.SSH_AUTH_SOCK;
+        if(sshAgent) {
+          sshAgentExists = fs.existsSync(sshAgent);
+          server.sshOptions = server.sshOptions || {};
+          server.sshOptions.agent = sshAgent;
+        }
+
+        if(!server.host) {
+          mupErrorLog(&#x27;Server host does not exist&#x27;);
+        } else if(!server.username) {
+          mupErrorLog(&#x27;Server username does not exist&#x27;);
+        } else if(!server.password &#x26;&#x26; !server.pem &#x26;&#x26; !sshAgentExists) {
+          mupErrorLog(&#x27;Server password, pem or a ssh agent does not exist&#x27;);
+        } else if(!mupJson.app) {
+          mupErrorLog(&#x27;Path to app does not exist&#x27;);
+        }
+
+        server.os = server.os || &#x22;linux&#x22;;
+
+        if(server.pem) {
+          server.pem =
+            rewritePath(server.pem, &#x22;SSH private key file is invalid&#x22;);
+        }
+
+        server.env = server.env || {};
+
+        var defaultEndpointUrl =
+          format(&#x22;http://%s:%s&#x22;, server.host, mupJson.env[&#x27;PORT&#x27;]);
+        server.env[&#x27;CLUSTER_ENDPOINT_URL&#x27;] =
+          server.env[&#x27;CLUSTER_ENDPOINT_URL&#x27;] || defaultEndpointUrl;
+      });
+    }
+
+    //rewrite ~ with $HOME
+    mupJson.app = rewritePath(
+      mupJson.app, &#x22;There is no meteor app in the current app path.&#x22;);
+
+    if(mupJson.ssl) {
+      mupJson.ssl.port = mupJson.ssl.port || 443;
+      mupJson.ssl.certificate = rewritePath(
+        mupJson.ssl.certificate, &#x22;SSL certificate file does not exists.&#x22;);
+      mupJson.ssl.key = rewritePath(
+        mupJson.ssl.key, &#x22;SSL key file does not exists.&#x22;);
+    }
+
+    // additional build options
+    mupJson.buildOptions = mupJson.buildOptions || {};
+
+    return mupJson;
+  } else {
+      var message =
+        &#x27;configuration file &#x27; + configFileName + &#x27; does not exist!&#x27;.red.bold;
+    console.error(message);
+    helpers.printHelp();
+    process.exit(1);
+  }
+
+  function rewritePath(location, errorMessage) {
+    if(!location) {
+      return mupErrorLog(errorMessage);
+    }
+
+    var homeLocation = process.env.HOME;
+    if(/^win/.test(process.platform)) {
+      homeLocation = process.env.USERPROFILE;
+    }
+
+    var location = location.replace(&#x27;~&#x27;, homeLocation).trim();
+    if(location.indexOf(0) !== &#x22;/&#x22; || location.indexOf(0) !== &#x22;\\&#x22;) {
+      // if path does not start with / or \ (on windows)
+      // we need to make sure, they are from the basedir
+      // but not from the current dir
+      location = path.resolve(basedir, location);
+    } else {
+      // anyway, we need to resolve path for windows compatibility
+      location = path.resolve(location);
+    }
+    if(!fs.existsSync(location)) {
+      mupErrorLog(errorMessage);
+    }
+
+    return location;
+  }
+
+  function mupErrorLog(message) {
+    var errorMessage = &#x27;Invalid configuration file &#x27; + configFileName + &#x27;: &#x27; + message;
+    console.error(errorMessage.red.bold);
+    process.exit(1);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mupx.helpers" id="apidoc.module.mupx.helpers">module mupx.helpers</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mupx.helpers.printHelp" id="apidoc.element.mupx.helpers.printHelp">
+        function <span class="apidocSignatureSpan">mupx.helpers.</span>printHelp
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">printHelp = function () {
+  console.error(&#x27;\nSyntax: mup &#x3c;action&#x3e; [--&#x3c;parameter&#x3e;]&#x27;);
+  console.error(&#x27;&#x27;);
+  console.error(&#x27;\nValid Actions (mandatory)&#x27;);
+  console.error(&#x27;---------------------------&#x27;);
+  console.error(&#x27;init                   - Initialize a Meteor Up project&#x27;);
+  console.error(&#x27;setup                  - Setup the server&#x27;);
+  console.error(&#x27;&#x27;);
+  console.error(&#x27;deploy                 - Deploy app to server&#x27;);
+  console.error(&#x27;reconfig               - Reconfigure the server and restart&#x27;);
+  console.error(&#x27;&#x27;);
+  console.error(&#x27;logs [-f --tail=all]   - Access logs&#x27;);
+  console.error(&#x27;&#x27;);
+  console.error(&#x27;start                  - Start your app instances&#x27;);
+  console.error(&#x27;stop                   - Stop your app instances&#x27;);
+  console.error(&#x27;restart                - Restart your app instances&#x27;);
+  console.error(&#x27;\nAvailable Parameters (optional)&#x27;);
+  console.error(&#x27;---------------------------------&#x27;);
+  console.error(&#x27;--config=mup-prod.json - Specify the deployment configuration&#x27;);
+  console.error(&#x27;                         Default value: mup.json&#x27;);
+  console.error(&#x27;--settings=file.json   - Specify the Meteor.settings file&#x27;);
+  console.error(&#x27;                         Default value: settings.json&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  mupJson.buildOptions = mupJson.buildOptions || {};
+
+  return mupJson;
+} else {
+    var message =
+      &#x27;configuration file &#x27; + configFileName + &#x27; does not exist!&#x27;.red.bold;
+  console.error(message);
+  helpers.<span class="apidocCodeKeywordSpan">printHelp</span>();
+  process.exit(1);
+}
+
+function rewritePath(location, errorMessage) {
+  if(!location) {
+    return mupErrorLog(errorMessage);
+  }
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mupx.linux" id="apidoc.module.mupx.linux">module mupx.linux</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mupx.linux.deploy" id="apidoc.element.mupx.linux.deploy">
+        function <span class="apidocSignatureSpan">mupx.linux.</span>deploy
+        <span class="apidocSignatureSpan">(bundlePath, env, config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">deploy = function (bundlePath, env, config) {
+  var deployCheckWaitTime = config.deployCheckWaitTime;
+  var appName = config.appName;
+  var taskList = nodemiral.taskList(&#x22;Deploy app &#x27;&#x22; + appName + &#x22;&#x27; (linux)&#x22;);
+
+  taskList.copy(&#x27;Uploading bundle&#x27;, {
+    src: bundlePath,
+    dest: &#x27;/opt/&#x27; + appName + &#x27;/tmp/bundle.tar.gz&#x27;,
+    progressBar: config.enableUploadProgressBar
+  });
+
+  copyEnvVars(taskList, env, appName);
+
+  taskList.copy(&#x27;Initializing start script&#x27;, {
+    src: path.resolve(TEMPLATES_DIR, &#x27;start.sh&#x27;),
+    dest: &#x27;/opt/&#x27; + appName + &#x27;/config/start.sh&#x27;,
+    vars: {
+      appName: appName,
+      useLocalMongo: config.setupMongo,
+      port: env.PORT,
+      sslConfig: config.ssl
+    }
+  });
+
+  deployAndVerify(taskList, appName, env.PORT, deployCheckWaitTime);
+
+  return taskList;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+async.mapSeries(
+  sessionsData,
+  function (sessionData, callback) {
+    var session = sessionData.session;
+    var taskListsBuilder = sessionData.taskListsBuilder
+    var env = _.extend({}, self.config.env, session._serverConfig.env);
+    var taskList = taskListsBuilder.<span class="apidocCodeKeywordSpan">deploy</span>(
+      bundlePath, env, self.config);
+    taskList.run(session, function (summaryMap) {
+      callback(null, summaryMap);
+    });
+  },
+  whenAfterDeployed(buildLocation)
+)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mupx.linux.reconfig" id="apidoc.element.mupx.linux.reconfig">
+        function <span class="apidocSignatureSpan">mupx.linux.</span>reconfig
+        <span class="apidocSignatureSpan">(env, config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">reconfig = function (env, config) {
+  var appName = config.appName;
+  var deployCheckWaitTime = config.deployCheckWaitTime;
+
+  var taskList = nodemiral.taskList(&#x22;Updating configurations (linux)&#x22;);
+
+  copyEnvVars(taskList, env, appName);
+  startAndVerify(taskList, appName, env.PORT, deployCheckWaitTime);
+
+  return taskList;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Actions.prototype.reconfig = function() {
+var self = this;
+var sessionInfoList = [];
+for(var os in self.sessionsMap) {
+  var sessionsInfo = self.sessionsMap[os];
+  sessionsInfo.sessions.forEach(function(session) {
+    var env = _.extend({}, self.config.env, session._serverConfig.env);
+    var taskList = sessionsInfo.taskListsBuilder.<span class="apidocCodeKeywordSpan">reconfig</span>(
+      env, self.config);
+    sessionInfoList.push({
+      taskList: taskList,
+      session: session
+    });
+  });
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mupx.linux.restart" id="apidoc.element.mupx.linux.restart">
+        function <span class="apidocSignatureSpan">mupx.linux.</span>restart
+        <span class="apidocSignatureSpan">(config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">restart = function (config) {
+  var taskList = nodemiral.taskList(&#x22;Restarting Application (linux)&#x22;);
+
+  var appName = config.appName;
+  var port = config.env.PORT;
+  var deployCheckWaitTime = config.deployCheckWaitTime;
+
+  startAndVerify(taskList, appName, port, deployCheckWaitTime);
+
+  return taskList;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mupx.linux.setup" id="apidoc.element.mupx.linux.setup">
+        function <span class="apidocSignatureSpan">mupx.linux.</span>setup
+        <span class="apidocSignatureSpan">(config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setup = function (config) {
+  var taskList = nodemiral.taskList(&#x27;Setup (linux)&#x27;);
+
+  taskList.executeScript(&#x27;Installing Docker&#x27;, {
+    script: path.resolve(SCRIPT_DIR, &#x27;install-docker.sh&#x27;)
+  });
+
+  taskList.executeScript(&#x27;Setting up Environment&#x27;, {
+    script: path.resolve(SCRIPT_DIR, &#x27;setup-env.sh&#x27;),
+    vars: {
+      appName: config.appName
+    }
+  });
+
+  if(config.setupMongo) {
+    taskList.copy(&#x27;Copying MongoDB configuration&#x27;, {
+      src: path.resolve(TEMPLATES_DIR, &#x27;mongodb.conf&#x27;),
+      dest: &#x27;/opt/mongodb/mongodb.conf&#x27;
+    });
+
+    taskList.executeScript(&#x27;Installing MongoDB&#x27;, {
+      script: path.resolve(SCRIPT_DIR, &#x27;install-mongodb.sh&#x27;)
+    });
+  }
+
+  if(config.ssl) {
+    taskList.copy(&#x27;Copying SSL certificate bundle&#x27;, {
+      src: config.ssl.certificate,
+      dest: &#x27;/opt/&#x27; + config.appName + &#x27;/config/bundle.crt&#x27;
+    });
+
+    taskList.copy(&#x27;Copying SSL private key&#x27;, {
+      src: config.ssl.key,
+      dest: &#x27;/opt/&#x27; + config.appName + &#x27;/config/private.key&#x27;
+    });
+
+    taskList.executeScript(&#x27;Verifying SSL configurations&#x27;, {
+      script: path.resolve(SCRIPT_DIR, &#x27;verify-ssl-configurations.sh&#x27;),
+      vars: {
+        appName: config.appName
+      }
+    });
+  }
+
+  return taskList;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mupx.linux.start" id="apidoc.element.mupx.linux.start">
+        function <span class="apidocSignatureSpan">mupx.linux.</span>start
+        <span class="apidocSignatureSpan">(config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">start = function (config) {
+  var taskList = nodemiral.taskList(&#x22;Starting Application (linux)&#x22;);
+
+  var appName = config.appName;
+  var port = config.env.PORT;
+  var deployCheckWaitTime = config.deployCheckWaitTime;
+
+  startAndVerify(taskList, appName, port, deployCheckWaitTime);
+
+  return taskList;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mupx.linux.stop" id="apidoc.element.mupx.linux.stop">
+        function <span class="apidocSignatureSpan">mupx.linux.</span>stop
+        <span class="apidocSignatureSpan">(config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stop = function (config) {
+  var taskList = nodemiral.taskList(&#x22;Stopping Application (linux)&#x22;);
+
+  //stopping
+  taskList.executeScript(&#x27;Stopping app&#x27;, {
+    script: path.resolve(SCRIPT_DIR, &#x27;stop.sh&#x27;),
+    vars: {
+      appName: config.appName
+    }
+  });
+
+  return taskList;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
