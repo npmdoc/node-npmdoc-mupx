@@ -49,6 +49,8 @@
 <h1>api documentation for
     <a
 
+        href="https://github.com/arunoda/meteor-up"
+
     >mupx (v1.5.3)</a>
 </h1>
 <h4>Production Quality Meteor Deployments</h4>
@@ -390,7 +392,23 @@
     fs.writeFileSync(dest, content);
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+console.log(&#x27;Configuration file : &#x27; + configFileName);
+console.log(&#x27;Settings file      : &#x27; + settingsFileName);
+console.log(&#x27;&#x27;);
+
+var action = cliOptions._[0];
+if(action == &#x27;init&#x27;) {
+//special setup for init
+ActionsRegistry.<span class="apidocCodeKeywordSpan">init</span>();
+} else {
+var cwd = path.resolve(&#x27;.&#x27;);
+//read config and validate it
+var config = Config.read(configFileName);
+var runOptions = {
+  settingsFileName: settingsFileName
+};
+...</pre></li>
     </ul>
 
 
@@ -916,7 +934,22 @@ for(var os in self.sessionsMap) {
     process.exit(1);
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var action = cliOptions._[0];
+if(action == &#x27;init&#x27;) {
+  //special setup for init
+  ActionsRegistry.init();
+} else {
+  var cwd = path.resolve(&#x27;.&#x27;);
+  //read config and validate it
+  var config = Config.<span class="apidocCodeKeywordSpan">read</span>(configFileName);
+  var runOptions = {
+    settingsFileName: settingsFileName
+  };
+
+  runActions(config, cwd, runOptions);
+}
+...</pre></li>
     </ul>
 
 
@@ -957,21 +990,16 @@ for(var os in self.sessionsMap) {
   console.error(&#x27;                         Default value: settings.json&#x27;);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-  mupJson.buildOptions = mupJson.buildOptions || {};
-
-  return mupJson;
-} else {
-    var message =
-      &#x27;configuration file &#x27; + configFileName + &#x27; does not exist!&#x27;.red.bold;
-  console.error(message);
-  helpers.<span class="apidocCodeKeywordSpan">printHelp</span>();
-  process.exit(1);
-}
-
-function rewritePath(location, errorMessage) {
-  if(!location) {
-    return mupErrorLog(errorMessage);
+  if(actionsRegistry[action]) {
+    actionsRegistry[action]();
+  } else {
+    if(typeof action !== &#x22;undefined&#x22;) {
+      var errorMessage = &#x27;No Such Action Exists: &#x27; + action;
+      console.error(errorMessage.bold.red);
+    }
+    helpers.<span class="apidocCodeKeywordSpan">printHelp</span>();
   }
+}
 ...</pre></li>
     </ul>
 
